@@ -1,0 +1,23 @@
+{
+  "name": "webappproject",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ayman-Kz25/WebAppProject.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ayman-Kz25/WebAppProject/issues"
+  },
+  "homepage": "https://github.com/Ayman-Kz25/WebAppProject#readme",
+  "description": "",
+  "devDependencies": {
+    "jest": "^30.2.0"
+  }
+}

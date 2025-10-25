@@ -1,0 +1,19 @@
+# Node modules or dependencies
+node_modules/
+
+# VS Code settings
+.vscode/
+
+# OS or temp files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# GitHub Actions cache
+.github/workflows/*.log
+
+# Build or output folders
+dist/
+build/

@@ -11,7 +11,7 @@ document.getElementById('regForm').addEventListener('submit', function(e) {
         msg.classList.add("show");
         this.reset();
       } else {
-        msg.innerText = "⚠️ Please fill out all fields.";
+        msg.innerText = "Please fill out all fields.";
         msg.style.color = "#dc3545";
         msg.classList.add("show");
       }
