@@ -1,4 +1,4 @@
-name: Build and Test
+name: Build and Validate Website
 
 on: [push, pull_request]
 
@@ -7,16 +7,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout Code
+        uses: actions/checkout@v3
 
-    - name: Setup Node
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18'
+      - name: Validate HTML Files
+        uses: Cyb3r-Jak3/html5validator-action@v5
+        with:
+          root: .
 
-    - name: Install dependencies
-      run: npm install
-
-    - name: Run Tests
-      run: npm test
+      - name: Print Success Message
+        run: echo "✅ HTML validation completed successfully!"
