@@ -9,7 +9,7 @@ document.getElementById('regForm').addEventListener('submit', function(e) {
         msg.innerText = "Registration Successful!";
         msg.style.color = "#28a745";
         msg.classList.add("show");
-        // this.reset();
+        this.reset();
       } else {
         msg.innerText = "⚠️ Please fill out all fields.";
         msg.style.color = "#dc3545";
