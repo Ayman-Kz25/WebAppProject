@@ -1,19 +1,22 @@
-name: Build and Validate Website
+name: Node Tests with Report
 
 on: [push, pull_request]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
-
-      - name: Validate HTML Files
-        uses: Cyb3r-Jak3/html5validator-action@v5
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          root: .
+          node-version: 18
 
-      - name: Print Success Message
-        run: echo "✅ HTML validation completed successfully!"
+      - run: npm install
+      - run: npm test
+
+      - name: Upload Test Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: junit-report
+          path: reports/
